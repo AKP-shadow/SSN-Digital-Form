@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Outpass</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'Outpass.css' %}" media="screen">
+<script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+<script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "ssnhostel",
+		"logo": "images/SSN-Institutions-1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Outpass">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="en">
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="sec-8b25" data-image-width="612" data-image-height="459">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-body-color u-text-default u-text-1">HOSTEL - PERMISSION FORM</h2>
+        <div class="u-form u-form-1">
+          <form class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
+          
+      
+            <div class="u-form-group u-form-name u-form-partition-factor-3 u-label-top">
+              <label for="name-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-1">Name</label>
+              <input type="text"  value="{{object.name}}" readonly="readonly" id="name-3b9a" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" >
+            </div>
+            <div class="u-form-group u-form-partition-factor-3 u-label-top">
+              <label for="email-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-2">Room No</label>
+              <input type="text" value="{{object.roomno}}" readonly="readonly" id="email-3b9a" name="roomno" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2">
+            </div>
+            <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-3">
+              <label for="text-c8e7" class="u-label u-spacing-0 u-text-body-color u-label-3">Year</label>
+              <input type="text"  value="{{object.year}}" readonly="readonly" id="text-c8e7" name="year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3">
+            </div>
+            <p class="u-form-group u-form-text u-text u-text-body-color u-text-2">Permission Form</p>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-5">
+              <label for="text-0990" class="u-label u-spacing-0 u-text-body-color u-label-4">Date</label>
+              <input type="text"  value="{{object.fromdate}}" readonly="readonly" id="text-0990" name="fromdate" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4" >
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-6">
+              <label for="text-ac9e" class="u-label u-spacing-0 u-text-body-color u-label-5">Time</label>
+              <input type="text"  value="{{object.fromtime}}" readonly="readonly" id="text-ac9e" name="fromtime" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5">
+            </div>
+            <p class="u-form-group u-form-text u-text u-text-body-color u-text-3">Permission To</p>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-8">
+              <label for="text-058d" class="u-label u-spacing-0 u-text-body-color u-label-6">Date</label>
+              <input type="text"  value="{{object.todate}}" readonly="readonly" id="text-058d" name="todate" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6">
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-9">
+              <label for="text-76a8" class="u-label u-spacing-0 u-text-body-color u-label-7">Time</label>
+              <input type="text"  value="{{object.totime}}" readonly="readonly" id="text-76a8" name="totime" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7">
+            </div>
+            <div class="u-form-group u-form-message u-label-top">
+              <label for="message-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-8">Purpose</label>
+              <textarea  readonly rows="4" cols="50" id="message-3b9a" name="purpose" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"> {{object.purpose}}</textarea>
+            </div>
+            
+            
+            
+          </form>
+        {% if object.status == "Approve" %}
+
+        </div>
+        <span class="u-icon u-align-right"><img src="{% static 'images/7211143-d0cabb31.png' %}" style="position: relative;bottom: 100px ; right: 60px;" width="160" height="160" alt=""></span><span class=" u-icon u-align-right-xxl "><img src="{% static 'images/7314921.png' %}"  width="100" height="100" style="position:absolute; bottom: 55px; right: 55px;"  alt=""></span>
+        <p class="u-text-black u-text-2 u-align-right" style="position: relative; bottom: 70px; right: 50px;">Signature of warden</p>
+      </div>
+      {% elif object.status == "Decline" %}
+    </div>
+    <span class="u-icon u-align-right"><img src="{% static 'images/7211147-b9656206.png' %}" style="position: relative;bottom: 100px ; right: 60px;" width="160" height="160" alt=""></span><span class=" u-icon u-align-right-xxl "><img src="{% static 'images/7314921.png' %}"  width="100" height="100" style="position:absolute; bottom: 55px; right: 55px;"  alt=""></span>
+    <p class="u-text-black u-text-2 u-align-right" style="position: relative; bottom: 70px; right: 50px;">Signature of warden</p>
+  </div>
+      {% endif %}
+    </section>
+
+  
+</body></html>

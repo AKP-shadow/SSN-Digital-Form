@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Outpass</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'Outpass.css' %}" media="screen">
+<script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+<script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "ssnhostel",
+		"logo": "images/SSN-Institutions-1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Outpass">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-header" id="sec-7bcc"><div class="u-clearfix u-sheet u-sheet-1">
+        <a class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="520">
+          <img src="{% static 'images/SSN-Institutions-1.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1.125rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7821"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-7821" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="{% url 'outpass' %}" style="padding: 10px 24px;">Outpass</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="{% url 'outpassapproval' %}" style="padding: 10px 24px;">Outpass Approval</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="{% url 'report' %}" style="padding: 10px 24px;">Report</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'outpass' %}">Outpass</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'outpassapproval' %}">Outpass Approval</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'report' %}">Report</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="sec-8b25" data-image-width="612" data-image-height="459">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-body-color u-text-default u-text-1">HOSTEL - PERMISSION FORM</h2>
+        <div class="u-form u-form-1">
+          <form method="POST" action="{% url 'outpasscreate' %}" enctype="multipart/form-data" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
+            {{form}}
+            <div class="u-form-group u-form-name u-form-partition-factor-3 u-label-top">
+              <label for="name-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-1">Name</label>
+              <input type="text" placeholder="Enter your Name" id="name-3b9a" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" required="">
+            </div>
+            <div class="u-form-group u-form-partition-factor-3 u-label-top">
+              <label for="email-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-2">Room No</label>
+              <input type="text" placeholder="Enter your room no" id="email-3b9a" name="roomno" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2" required="required">
+            </div>
+            <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-3">
+              <label for="text-c8e7" class="u-label u-spacing-0 u-text-body-color u-label-3">Year</label>
+              <input type="text" placeholder="Enter your year" id="text-c8e7" name="year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3" required="required">
+            </div>
+            <p class="u-form-group u-form-text u-text u-text-body-color u-text-2">Permission Form</p>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-5">
+              <label for="text-0990" class="u-label u-spacing-0 u-text-body-color u-label-4">Date</label>
+              <input type="text" placeholder="Enter Date" id="text-0990" name="fromdate" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4" required="required">
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-6">
+              <label for="text-ac9e" class="u-label u-spacing-0 u-text-body-color u-label-5">Time</label>
+              <input type="text" placeholder="Enter Time" id="text-ac9e" name="fromtime" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5" required="required">
+            </div>
+            <p class="u-form-group u-form-text u-text u-text-body-color u-text-3">Permission To</p>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-8">
+              <label for="text-058d" class="u-label u-spacing-0 u-text-body-color u-label-6">Date</label>
+              <input type="text" placeholder="Enter Date" id="text-058d" name="todate" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6" required="required">
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-9">
+              <label for="text-76a8" class="u-label u-spacing-0 u-text-body-color u-label-7">Time</label>
+              <input type="text" placeholder="Enter Time" id="text-76a8" name="totime" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7" required="required">
+            </div>
+            <div class="u-form-group u-form-message u-label-top">
+              <label for="message-3b9a" class="u-label u-spacing-0 u-text-body-color u-label-8">Purpose</label>
+              <textarea placeholder="Enter your Purpose" rows="4" cols="50" id="message-3b9a" name="purpose" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+            </div>
+            <div class="u-align-center u-form-group u-form-submit u-label-top">
+              <input type="submit" value="submit" class="u-form-control-hidden">
+          
+              <button id="myButton" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-1-base u-radius-9 u-btn-1">Submit</button>
+              <!-- <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "{% url 'outpassdetails' %}";
+                }; 
+            </script> -->
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </section>
+
+  
+</body></html>

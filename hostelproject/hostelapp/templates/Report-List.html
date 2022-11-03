@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Report List</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css'%}" media="screen">
+<link rel="stylesheet" href="{% static 'Report-List.css' %}" media="screen">
+<script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+<script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Hostel",
+		"logo": "images/SSN-Institutions-1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Report List">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-f9fd"><div class="u-clearfix u-sheet u-sheet-1">
+        <a  class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="520">
+          <img src="{% static 'images/SSN-Institutions-1.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1.125rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7821"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-7821" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="{% url 'outpasslist' %}" style="padding: 10px 24px;">Outpass List</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="{% url 'reportlist' %}" style="padding: 10px 24px;">Report List</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'outpasslist' %}">Outpass List</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'reportlist' %}">Report List</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-image u-shading u-section-1" id="sec-10bf" data-image-width="612" data-image-height="459">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-body-color u-text-default u-text-1">REPORT&nbsp;<span style="font-weight: 700;"></span>LIST
+        </h2>
+
+        {% for report in report_list %}
+
+
+        <div class="u-border-3 u-border-grey-40 u-container-style u-effect-fade u-group u-hover-box u-hover-feature u-radius-15 u-shape-round u-white u-group-1" data-href="{% url 'reportforid' report.id %}">
+          <div class="u-back-slide u-container-layout u-container-layout-1">
+            <p class="u-align-left u-text u-text-body-color u-text-2"> {{report.name}}</p><span class="u-file-icon u-icon u-icon-1"><img src="{% static 'images/88450.png' %}" alt=""></span>
+            <p class="u-text u-text-3">Report&nbsp; :&nbsp;</p>
+            <p class="u-text u-text-grey-50 u-text-4">{{report.complaint}}</p>
+          </div>
+          <div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+        </div>
+        {% endfor %}
+
+
+        <div class="u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+        
+      
+      
+    </section>
+  
+</body></html>
